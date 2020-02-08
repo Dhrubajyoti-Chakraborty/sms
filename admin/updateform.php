@@ -60,7 +60,12 @@ $data=mysqli_fetch_assoc($run);
 </tr>
 
 <tr>
-        <td align="center" colspan="2"><input type="submit" name="submit" value="Submit" required></td>
+    <td align="center" colspan="2">
+    <input type="hidden" name="sid" value="<?php echo $data['id']; ?>" />
+      
+      <input type="submit" name="submit" value="Submit" />
+      
+    </td>
 </tr>
 </table>
 
