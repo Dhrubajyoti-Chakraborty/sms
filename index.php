@@ -5,7 +5,7 @@
 <head>
 	<title>Student Management System</title>
 </head>
-<body>
+<body style="background-color:orange;">
 <h5 align="right" style="margin-right:20px;"><a href="login.php">Admin Login</a></h5>
 
 <h1 align="center">Welcome to Student Management System</h1>
@@ -21,7 +21,7 @@
         <tr>
         <td>Choose standard</td>
         <td>
-            <select name="standard" required style="width:50%">
+            <select name="standard" required style="width:50%;">
                <option value="1">1st</option>
                <option value="2">2nd</option>
                <option value="3">3rd</option>
@@ -42,21 +42,28 @@
     </tr>
    
     <tr>
-        <td colspan="2" align="center"><input type="submit" name="submit" value="show info"></td>
+        <td colspan="2" align="center"><input type="submit" name="submit" value="show info" style="background-color:#c33541;"></td>
     </tr>
 
 </table>
 </form>
-
-
-
-
-
 </body>
-
-
 </html>
+<?php
 
+if(isset($_POST['submit'])){
+    $standard=$_POST['standard'];
+    $rollno=$_POST['rollno'];
+
+    include('dbcon.php');
+    include('function.php');
+
+    showdetails($standard,$rollno);
+}
+
+
+
+?>
 
 
 

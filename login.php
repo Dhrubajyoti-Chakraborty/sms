@@ -13,8 +13,8 @@ if(isset($_SESSION['uid'])){
 <head>
 	<title>Admin Login</title>
 </head>
-<body>
-    <h1 align="center">Admin Login</h1>
+<body style="background-color:orange;">
+    <h1 align="center" >Admin Login</h1>
     <form method="post" action="login.php">
     <table align="center">
         <tr>
@@ -27,7 +27,7 @@ if(isset($_SESSION['uid'])){
 
         
         <tr>
-           <td colspan="2" align="center"><input type="submit" name="login" value="Login" required> </td>
+           <td colspan="2" align="center" ><input type="submit" name="login" value="Login" style="background-color:#c33541;" required> </td>
         </tr>
     </table>
     </form>

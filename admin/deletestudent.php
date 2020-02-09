@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
   $run=mysqli_query($con,$sql);
 
   if(mysqli_num_rows($run)<1){
-      echo "<tr><td colspan='5'>No records found</td></tr>";
+      echo "<tr ><td colspan='5' align='center' >No records found</td></tr>";
   } else {
       $count=0;
       while($data=mysqli_fetch_assoc($run)){
